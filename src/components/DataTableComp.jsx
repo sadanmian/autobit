@@ -1,5 +1,11 @@
+import InputSearch from "./InputSearch";
+
 function DataTableComp() {
-  return <div>DataTableComp</div>;
+  return (
+    <div>
+      <InputSearch />
+    </div>
+  );
 }
 
 export default DataTableComp;
