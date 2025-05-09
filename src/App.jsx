@@ -1,39 +1,49 @@
+import { Box, useTheme } from "@mui/material";
 import Header from "./components/Header";
 import SimpleBottomNavigation from "./components/SimpleBottomNavigation";
 import DataTableComp from "./components/DataTableComp";
-import { Box } from "@mui/material";
+
+// Constants for reusable values
+const MAX_WIDTH = 600;
+const BOTTOM_NAV_HEIGHT = 7;
 
 function App() {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
-        maxWidth: 600, // Typical mobile max width
-        margin: "0 auto", // Center horizontally
-        height: "100vh", // Full viewport height
-        backgroundColor: "#ffffff", // Optional background color
-        overflowX: "hidden", // Prevent horizontal scroll
-        boxShadow: 3, // Optional shadow for mobile-like effect
+        maxWidth: MAX_WIDTH,
+        margin: "0 auto",
+        height: "100vh",
+        backgroundColor: theme.palette.background.default,
+        overflowX: "hidden",
+        boxShadow: 3,
         display: "flex",
         flexDirection: "column",
         position: "relative",
       }}
     >
       <Header />
+
       <Box
+        component="main"
         sx={{
           flex: 1,
           overflowY: "auto",
-          pb: 7, // Add padding bottom equal to bottom navigation height
+          pb: BOTTOM_NAV_HEIGHT,
         }}
       >
         <DataTableComp />
       </Box>
+
       <Box
+        component="nav"
         sx={{
           position: "sticky",
           bottom: 0,
           width: "100%",
-          zIndex: 1000, // Ensure it's above other content
+          zIndex: theme.zIndex.appBar,
         }}
       >
         <SimpleBottomNavigation />
