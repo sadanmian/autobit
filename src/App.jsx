@@ -1,14 +1,12 @@
-import { Button } from "@mui/material";
-import React from "react";
 import Header from "./components/Header";
 import SimpleBottomNavigation from "./components/SimpleBottomNavigation";
-import Table from "./components/Table";
+import DataTableComp from "./components/DataTableComp";
 
 function App() {
   return (
     <div>
       <Header />
-      <Table />
+      <DataTableComp />
       <SimpleBottomNavigation />
     </div>
   );
