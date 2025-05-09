@@ -40,7 +40,7 @@ function HeaderBottom() {
           }
           sx={{
             flex: 1,
-            marginRight: "8px",
+            // marginRight: "8px",
             color: "#000",
             padding: "16px",
             // borderColor: "#1976d2",
