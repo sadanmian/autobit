@@ -18,13 +18,17 @@ import {
 function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
   return (
-    <Box
-      sx={{
-        position: "fixed",
-        bottom: 0,
-        width: "100%",
-        zIndex: 1000,
-      }}
+    <div
+      style={
+        {
+          // position: "fixed",
+          // bottom: 0,
+          // width: "100%",
+          // right: "0",
+          // left: "0",
+          // zIndex: 1000,
+        }
+      }
     >
       <BottomNavigation
         sx={{ backgroundColor: "#f5f5f5", padding: "15px" }}
@@ -66,7 +70,7 @@ function SimpleBottomNavigation() {
         <BottomNavigationAction label="New Deals" icon={<StackedBarChart />} />
         <BottomNavigationAction label="History" icon={<History />} />
       </BottomNavigation>
-    </Box>
+    </div>
   );
 }
 
